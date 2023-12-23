@@ -3,10 +3,10 @@ import keyboard
 
 RESET = '\033[0m'
 
-ROJO = '\033[91m'
-VERDE = '\033[92m'
-AMARILLO = '\033[93m'
-AZUL = '\033[94m'
+RED = '\033[91m'
+GREEN = '\033[92m'
+YELLOW = '\033[93m'
+BLUE = '\033[94m'
 MAGENTA = '\033[95m'
 CYAN = '\033[96m'
 
@@ -31,7 +31,7 @@ def _show(question, choice_list, color, idx, filter_term, window_size = 10):
         if window_next_side_idx > len(choice_list):
             window_next_side_idx = len(choice_list) 
 
-        print(f"{AMARILLO}{question}:{RESET} {choice_list[idx]}")
+        print(f"{YELLOW}{question}:{RESET} {choice_list[idx]}")
         
         aux_choice_list = choice_list.copy()
 
@@ -39,7 +39,7 @@ def _show(question, choice_list, color, idx, filter_term, window_size = 10):
         print("\n".join(aux_choice_list[window_prev_side_idx:window_next_side_idx]))
 
     else:
-        print(f"{AMARILLO}{question}:{RESET}")
+        print(f"{YELLOW}{question}:{RESET}")
 
 
 
@@ -142,7 +142,7 @@ if __name__ == "__main__":
             "cucumber",
             "watermelon"
         ],
-        color = ROJO,
+        color = RED,
         carrousel=1
     ))
 
