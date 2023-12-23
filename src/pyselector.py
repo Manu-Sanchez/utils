@@ -97,7 +97,14 @@ def keyboard_interaction(event, question, choice_list, allow_filter, case_sensit
         else:
             idx += 1
 
+    elif event.name == "flecha izquierda":
+        idx = 0
+    
+    elif event.name == "flecha derecha":
+        idx = len(aux_choice_list) - 1
+
     if event.name != "enter":
+        time.sleep(0.1)
         _show(
             question,
             aux_choice_list,
@@ -105,6 +112,7 @@ def keyboard_interaction(event, question, choice_list, allow_filter, case_sensit
             idx,
             filter_term
         )
+
 
 def show_choice_list(question, choice_list, allow_filter=False, case_sensitive=True, carrousel=False, color=None):
 
