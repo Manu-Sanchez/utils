@@ -145,7 +145,7 @@ last character the user added to the filter.
 This filter step is made before showing the results, so when setting any filter it will be automatically reflected in the choice list.
 
 ## Support
-I love to share my developments with everyone, and I'll love also to continue and have more time to spend developing these utilities, so if you find it useful and you would like to receive new packages, updates, etc, you can support me with the following link: https://www.paypal.com/donate/?hosted_button_id=29SLPQEVYP9Y
+I love to share my developments with everyone, and I'll love also to continue and have more time to spend developing these utilities, so if you find it useful and you would like to receive new packages, updates, etc, you can support me with the following link: [https://www.paypal.com/donate/?hosted_button_id=29SLPQEVYP9Y](https://www.paypal.com/donate/?hosted_button_id=29SLPQEVYP9YL)
 
 Other way to support my job is to leave me a rating or a feedback, this will be also highly appretiated, I want to continue building things, growing and improving my ideas.
 
