@@ -137,6 +137,8 @@ By other hand the keyboard_interaction function is aware of listening the keys t
 Something that you can not and it's **HIGH IMPORTANT** is that you need to set the proper event.name keys to your system, in my case they are 'flecha abajo' for down key,
 and 'flecha arriba' for the up key, so please adjust this one before using it.
 
+![image](https://github.com/Manu-Sanchez/utils/assets/56635300/a956369b-5b1d-4fb3-854e-bed34001c741)
+
 Next, the filter it's very simpler and what it does is wait till the actual key pressed is a character (it has 1 of lenght), otherwise if the pressed key is the backspace, then it will remove the 
 last character the user added to the filter.
 
