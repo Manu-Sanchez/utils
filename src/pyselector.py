@@ -13,18 +13,30 @@ CYAN = '\033[96m'
 idx = 0
 filter_term = ""
 
-def _show(question, choice_list, color, idx, filter_term):
+def _show(question, choice_list, color, idx, filter_term, window_size = 10):
 
     os.system("cls")
     print(f"Filtering By: {filter_term}")
 
     if choice_list: 
+        window_side_size = int(window_size/2)
+
+        window_prev_side_idx = idx - window_side_size
+        if window_prev_side_idx < 0:
+           
+            window_side_size = window_side_size + (window_side_size - idx)
+            window_prev_side_idx = 0
+
+        window_next_side_idx = idx + window_side_size
+        if window_next_side_idx > len(choice_list):
+            window_next_side_idx = len(choice_list) 
+
         print(f"{AMARILLO}{question}:{RESET} {choice_list[idx]}")
         
         aux_choice_list = choice_list.copy()
 
         if color: aux_choice_list[idx] = f"{color}> {aux_choice_list[idx]}{RESET}"
-        print("\n".join(aux_choice_list))
+        print("\n".join(aux_choice_list[window_prev_side_idx:window_next_side_idx]))
 
     else:
         print(f"{AMARILLO}{question}:{RESET}")
@@ -116,9 +128,22 @@ if __name__ == "__main__":
     print(show_choice_list(
         "Select an item",
         [
-            0,1,2,3,4,5
+            "apple",
+            "cheese",
+            "orange",
+            "milk",
+            "water",
+            "cola",
+            "onion",
+            "grapes",
+            "lemon",
+            "pineapple",
+            "juice",
+            "cucumber",
+            "watermelon"
         ],
-        color = ROJO
+        color = ROJO,
+        carrousel=1
     ))
 
 
